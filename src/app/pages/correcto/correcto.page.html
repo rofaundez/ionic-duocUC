@@ -1,0 +1,26 @@
+<ion-header class="nube-header">
+  <ion-toolbar>
+    <ion-title>Correcto!</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="center-container">
+    <div class="form-container">
+      <form (ngSubmit)="restablecerContrasena()">
+        <ion-item>
+          <img src="../../../assets/img/bien.jpg" alt="Incorrecto" class="image" />
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Nueva Contraseña</ion-label>
+          <ion-input [(ngModel)]="nuevaContrasena" name="password" type="password" required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Confirmar Contraseña</ion-label>
+          <ion-input [(ngModel)]="confirmarContrasena" name="confirmPassword" type="password" required></ion-input>
+        </ion-item>
+        <ion-button expand="block" type="submit">Restablecer</ion-button>
+      </form>
+    </div>
+  </div>
+</ion-content>

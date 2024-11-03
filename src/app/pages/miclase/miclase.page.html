@@ -1,0 +1,75 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>Duoc UC</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Bienvenidos</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="card-title">Mi Clase</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item class="custom-item align-items">
+          <ion-icon name="time"></ion-icon>
+          <span>Bloque de inicio: {{ asistencia?.bloqueInicio || ' ' }}</span>
+        </ion-item>
+        <ion-item class="custom-item align-items">
+          <ion-icon name="time"></ion-icon>
+          <span>Bloque de término: {{ asistencia?.bloqueTermino || ' ' }}</span>
+        </ion-item>
+        <ion-item class="custom-item align-items">
+          <ion-icon name="time"></ion-icon>
+          <span>Hora de inicio: {{ asistencia?.horaInicio || ' ' }}</span>
+        </ion-item>
+        <ion-item class="custom-item align-items">
+          <ion-icon name="time"></ion-icon>
+          <span>Hora de término: {{ asistencia?.horaFin || ' ' }}</span>
+        </ion-item>
+        <ion-item class="custom-item align-items">
+          <ion-icon name="school"></ion-icon>
+          <span>Sigla de asignatura: {{ asistencia?.idAsignatura || ' ' }}</span>
+        </ion-item>
+        <ion-item class="custom-item align-items">
+          <ion-icon name="person"></ion-icon>
+          <span>Nombre del profesor: {{ asistencia?.nombreProfesor || ' ' }}</span>
+        </ion-item>
+        <ion-item class="custom-item align-items">
+          <ion-icon name="list"></ion-icon>
+          <span>Sección: {{ asistencia?.seccion || ' ' }}</span>
+        </ion-item>
+        <ion-item class="custom-item align-items">
+          <ion-icon name="location"></ion-icon>
+          <span>Sede: {{ asistencia?.sede || ' ' }}</span>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+    
+  </ion-card>
+
+  <ion-footer>
+    <ion-toolbar color="primary" class="ion-text-center">
+      <ion-segment value="miclase">
+        <ion-segment-button value="all" (click)="navegar('/inicio')">
+          <ion-label>Inicio</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="miclase" (click)="navegar('/miclase')">
+          <ion-label>Mi clase</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="misdatos" (click)="navegar('/misdatos')">
+          <ion-label>Mis datos</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="salir" (click)="navegar('/login')">
+          <ion-label>Salir</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>

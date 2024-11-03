@@ -1,0 +1,120 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title #titulo size="large">
+    DUOC UC - Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="centrar">
+    <div class="enmarcar ion-text-center" #page>
+
+      <ion-toolbar class="ion-padding-top">
+        <h1 *ngIf="usuario.cuenta.trim() !== ''">
+          ¡Bienvenido(a) 
+          {{ usuario.nombre }} 
+          {{ usuario.apellido }}!
+        </h1>
+        <h1 *ngIf="usuario.cuenta.trim() == ''">
+          Para usar el sistema debe llenar sus datos
+        </h1>
+        <h2>
+          Escanea el codigo QR para registrar tu asistencia a clases
+        </h2>
+
+        
+      </ion-toolbar>
+            <h1 *ngIf="!datosQR">Registra tu asistecia a clase</h1> 
+            
+            <video #video [hidden]="!escaneando" style="width:100%"></video>
+            <canvas #canvas hidden></canvas>
+            <div *ngIf="datosQR">
+              <h1> Has quedado presente en tu clase </h1>
+              <table>
+                <tbody>
+                  <tr>
+                    <td>Bloque Inicio</td>
+                    <td>{{ asistencia!.bloqueInicio }}</td>
+                  </tr>
+                  <tr>
+                    <td>Bloque Término</td>
+                    <td>{{ asistencia!.bloqueTermino }}</td>
+                  </tr>
+                  <tr>
+                    <td>Día</td>
+                    <td>{{ asistencia!.dia }}</td>
+                  </tr>
+                  <tr>
+                    <td>Hora Inicio</td>
+                    <td>{{ asistencia!.horaInicio }}</td>
+                  </tr>
+                  <tr>
+                    <td>Hora Fin</td>
+                    <td>{{ asistencia!.horaFin }}</td>
+                  </tr>
+                  <tr>
+                    <td>ID Asignatura</td>
+                    <td>{{ asistencia!.idAsignatura }}</td>
+                  </tr>
+                  <tr>
+                    <td>Nombre Asignatura</td>
+                    <td>{{ asistencia!.nombreAsignatura }}</td>
+                  </tr>
+                  <tr>
+                    <td>Nombre Profesor</td>
+                    <td>{{ asistencia!.nombreProfesor }}</td>
+                  </tr>
+                  <tr>
+                    <td>Sección</td>
+                    <td>{{ asistencia!.seccion }}</td>
+                  </tr>
+                  <tr>
+                    <td>Sede</td>
+                    <td>{{ asistencia!.sede }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+      
+            <div class="margin-top">
+              <ion-button *ngIf="!escaneando" (click)="comenzarEscaneoQR()" shape="round">
+                <ion-icon slot="start" name="videocam-outline"></ion-icon>
+                Comenzar Escaneo de QR
+              </ion-button>
+        
+              <ion-button *ngIf="escaneando" (click)="detenerEscaneoQR()" shape="round">
+                <ion-icon slot="start" name="stop-circle-outline"></ion-icon>
+                Detener escaneo de QR
+              </ion-button>
+            </div>
+
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary" class="ion-text-center">
+
+    <ion-segment value="all">
+      <ion-segment-button value="all" (click)="navegar('/inicio')">
+        <ion-label>Inicio</ion-label>
+      </ion-segment-button>
+
+      <ion-segment-button value="miclase" (click)="navegar('/miclase')">
+        <ion-label>Mi clase</ion-label>
+      </ion-segment-button>
+
+      <ion-segment-button value="misdatos" (click)="navegar('/misdatos')">
+        <ion-label> Mis datos</ion-label>
+      </ion-segment-button>
+
+      <ion-segment-button value="salir" (click)="navegar('/login')">
+        <ion-label> Salir</ion-label>
+      </ion-segment-button>
+
+    </ion-segment>
+
+  </ion-toolbar>
+</ion-footer>
+

@@ -1,0 +1,28 @@
+.enmarcar-login {
+  max-width: 400px;
+  width: 100%;
+  margin: auto;
+}
+
+.ancho-boton {
+  width: 140px;
+}
+
+ion-content {
+  --background: url('../../../assets/img/duoca.jpg') no-repeat center center/cover;
+  --color: var(--ion-color-dark); /* Texto negro */
+}
+
+
+/*cambiar color de recuperar contraseña*/
+.link-personalizado {
+  color: black; 
+  text-decoration: none; 
+}
+
+.link-personalizado:hover {
+  color: blue; 
+  text-decoration: underline; 
+}
+/*cambiar color de recuperar contraseña*/
+

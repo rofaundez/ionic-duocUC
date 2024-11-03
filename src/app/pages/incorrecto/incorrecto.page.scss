@@ -1,0 +1,37 @@
+
+
+/* Estilos para la "nube" flotante del encabezado */
+.nube-header {
+  position: absolute;
+  top: 170px;              /* Ubicación arriba del contenido */
+  left: 50%;
+  transform: translateX(-50%);/* Centrar horizontalmente */
+  width: auto;            /* Ajusta el ancho automáticamente */
+  background-color: white; /* Fondo blanco */
+  padding: 10px 20px;     /* Espaciado interno para simular una nube */
+  border-radius: 30px;    /* Bordes redondeados para parecer una nube */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra ligera para dar sensación de flotación */
+  z-index: 10;            /* Asegurar que el encabezado esté sobre el contenido */
+}
+
+
+.centrar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #002366; /* Color azul oscuro de fondo */
+}
+
+.enmarcar {
+  background-color: white; /* El recuadro es blanco */
+  padding: 20px;
+  border-radius: 8px; /* Bordes redondeados del recuadro */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para darle profundidad */
+  width: 90%;
+  max-width: 400px;
+}
+
+.ion-text-center {
+  text-align: center;
+}

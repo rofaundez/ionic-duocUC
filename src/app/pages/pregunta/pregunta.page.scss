@@ -1,0 +1,71 @@
+/* Centra el contenido vertical y horizontalmente */
+.center-container {
+  display: flex;
+  justify-content: space-around; /* Centrado horizontal */
+  align-items: center;     /* Centrado vertical */
+  height: 100%;            /* Ocupa todo el alto de la página */
+  padding: 20px;           /* Espaciado para evitar que se pegue a los bordes */
+}
+
+/* Estilos para la "nube" flotante del encabezado */
+.nube-header {
+  position: absolute;
+  top: 150px;              /* Ubicación arriba del contenido */
+  left: 50%;
+  transform: translateX(-50%);/* Centrar horizontalmente */
+  width: auto;            /* Ajusta el ancho automáticamente */
+  background-color: white; /* Fondo blanco */
+  padding: 10px 20px;     /* Espaciado interno para simular una nube */
+  border-radius: 30px;    /* Bordes redondeados para parecer una nube */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra ligera para dar sensación de flotación */
+  z-index: 10;            /* Asegurar que el encabezado esté sobre el contenido */
+}
+
+/* Centra el contenido vertical y horizontalmente */
+.center-container {
+  display: flex;
+  justify-content: center; /* Centrado horizontal */
+  align-items: center;     /* Centrado vertical */
+  height: 100%;            /* Ocupa todo el alto de la página */
+  padding: 20px;           /* Espaciado para evitar que se pegue a los bordes */
+}
+
+/* Recuadro del formulario con sombra */
+.form-container {
+  background-color: white;   /* Color de fondo para el recuadro */
+  padding: 20px;             /* Espaciado interno para el recuadro */
+  border-radius: 10px;       /* Bordes redondeados */
+  box-shadow: 0 8px 16px rgb(0, 0, 0);  /* Sombra más grande y difusa */
+  max-width: 400px;          /* Ancho máximo del formulario */
+  width: 100%;               /* El recuadro ocupa el 100% de su contenedor */
+  margin-top: 100px;         /* Espacio adicional para que no se superponga con la nube */
+}
+/* Estilos adicionales opcionales para mejorar la presentación */
+ion-item {
+  margin-bottom: 10px;
+}
+
+ion-button {
+  margin-top: 20px;
+}
+
+.password-container {
+  display: flex;
+  align-items: center; /* Alinea verticalmente el texto y el botón */
+  justify-content: center; /* Alinea horizontalmente en el centro */
+}
+
+.password-container p {
+  margin-right: 10px; /* Espacio entre el texto y el botón */
+}
+
+ion-content {
+  --background: var(--ion-color-primary); /* Fondo amarillo */
+  --color: var(--ion-color-dark); /* Texto negro */
+}
+
+.small-title {
+  font-size: 16px; /* Ajusta el tamaño del texto según sea necesario */
+  font-weight: normal; /* Opcional: Cambia el grosor del texto */
+  text-align: center;  /* Opcional: Centra el texto */
+}

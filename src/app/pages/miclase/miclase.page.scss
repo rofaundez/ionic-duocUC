@@ -1,0 +1,56 @@
+.custom-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-right: 8px;;
+}
+
+.custom-item ion-icon {
+  margin-right: 8px; /* Espacio entre el icono y el texto */
+  color: #007BFF; /* Color del ícono */
+  font-size: 24px; /* Tamaño del ícono */
+}
+
+.ion-text-center {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.card-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.align-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Para alinear los íconos y el texto */
+}
+
+.custom-item {
+  padding: 10px;
+}
+
+ion-list {
+  margin: 0;
+}
+
+ion-item {
+  --ion-item-background: transparent; /* Para que el fondo sea transparente */
+  --ion-item-border-color: transparent; /* Sin bordes */
+}
+
+ion-icon {
+  margin-right: 10px;
+  color: var(--ion-color-primary);
+}
+
+.ion-text-center {
+  text-align: center;
+}
+
+.segment-footer {
+  --background: transparent; /* Fondo transparente para el segment */
+}
